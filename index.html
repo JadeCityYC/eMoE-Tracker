@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>eMoE-Tracker</title>
+    <meta name="author" content="YuchengChen">
+    <meta name="description" content="Project page of eMoE-Tracker">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="eccv_logo.png">
+    <!-- Format -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="../format/app.css">
+    <link rel="stylesheet" href="../format/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    <script src="../format/app.js"></script>
+    <style>
+        .center-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+  </head>
+
+  <body style=“text-align: center;”>
+    <div class="container" id="main">
+        <div class="row">
+            <h1 class="col-md-12 text-center">
+                eMoE-Tracker: Environmental MoE-based Transformer for Robust Event-guided Object Tracking<br /> 
+            </h1>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+			<br>
+                           Yucheng Chen
+                        
+                        <br /> AI Thrust, HKUST(GZ)
+                        <br /> &nbsp &nbsp
+
+                    </li>
+
+
+                            <li>
+			    <br>
+                        <a href="https://addisonwang2013.github.io/vlislab/linwang.html">
+                           Addison Lin Wang
+                        </a>
+                        <br /> AI & CMA Thrust, HKUST(GZ) 
+			    <br/> Dept. of CSE, HKUST 
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+             <!-- ##### Elements #####-->
+        <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+			    <a href="https://arxiv.org/abs/2406.20024">
+                            <img src="./images/arxiv.png" height="100px"><br>
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+			    <!-- <a href="">
+                            <img src="./images/youtube_icon.jpg" height="100px"><br>
+                                <h4><strong>Video</strong></h4>
+                            </a>
+                        </li>
+                        <li> -->
+                            <a href=" ">
+                            <img src="./images/github_icon.jpg" height="100px"><br>
+                                <h4><strong>Code</strong></h4>
+                            </a>
+                        </li>
+
+                        <!-- <li>
+                            
+                            <img src="./images/colab_icon.jpg" height="100px"><br>
+                                <h4><strong>Colab</strong></h4>
+                            </a>
+                        </li> -->
+ 
+
+<!--                         <li>
+                            <a href="https://github.com/jiazhou-garland/ELIP/blob/master/Appendix.pdf">
+                            <img src="./images/slide_icon.jpg" height="100px"><br>
+                                <h4><strong>Supp</strong></h4>
+                            </a>
+                        </li>                      -->
+                        <li>
+                            <a href="https://vlislab22.github.io/vlislab/">
+                            <img src="./images/lab_logo.png" height="100px"><br>
+                                <h4><strong>Vlislab</strong></h4>
+                            </a>
+                        </li>                       
+                      
+                    </ul>
+                </div>
+        </div>
+	    
+        <!-- ##### Abstract #####-->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <p class="text-justify">
+	The unique complementarity of frame-based and event cameras for high frame rate object tracking has recently inspired some research attempts to develop multi-modal fusion approaches. 
+However, these methods directly fuse both modalities and thus ignore the environmental attributes, \eg, motion blur, illumination variance, occlusion, scale variation, etc. Meanwhile, insufficient interaction between search and template features makes distinguishing target objects and backgrounds difficult. As a result, performance degradation is induced especially in challenging conditions.  This paper proposes a novel and effective Transformer-based event-guided tracking framework, called eMoE-Tracker, which achieves new SOTA performance under various conditions. Our key idea is to disentangle the environment into several learnable attributes to dynamically learn the attribute-specific features and strengthen the target information by improving the interaction between the target template and search regions. To achieve the goal, we first propose an environmental Mix-of-Experts (eMoE) module that is built upon the environmental Attributes Disentanglement to learn attribute-specific features and environmental Attributes Assembling to assemble the attribute-specific features by the learnable attribute scores dynamically. The eMoE module is a subtle router that prompt-tunes the transformer backbone more efficiently.  
+We then introduce a contrastive relation modeling (CRM) module to emphasize target information by leveraging a contrastive learning strategy between the target template and search regions. Extensive experiments on diverse event-based benchmark datasets showcase the superior performance of our eMoE-Tracker compared to the prior arts. 
+                </p>
+            </div>
+        </div>
+	    
+<div class="row">
+     <div class="col-md-8 col-md-offset-2">
+          <h3>
+              Demo_video 
+          </h3>   
+    </div>   
+         <div class="col-md-8 col-md-offset-2">
+            <video width="750"  controls >
+                <source src="./video/demoVideoShow.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>   
+    </div>          
+      </div>
+
+        <!-- ##### Results #####-->
+
+     <div class="row">     
+        <div class="col-md-8 col-md-offset-2">
+            <h3>
+                The overall framework of our eMoE-Tracker.
+            </h3>
+		<p class="text-justify">
+		Our eMoE-Tracker consists of two modules: 
+		The eMoE module disentangles the environment into several learnable attributes to learn attribute-specific features
+                and assemble them by attribute gating scores for discriminative tracking representation. Then, CRM module is responsible for
+		improving the interaction between search region and target template, thus enhancing the target objects.
+		</p>
+            	<img src="./images/Framework-new.png" class="img-responsive" alt="vis_res" class="center-image" >
+      	</div>
+    </div>
+	<div class="row">     
+        <div class="col-md-8 col-md-offset-2">
+            <h3>
+                Tracking performance on four environmental attributes.
+            </h3>
+		
+            	<img src="./images/visualization_attributes.png"  class="img-responsive" alt="vis_res" class="center" >
+      	</div>
+    </div>
+     <div class="row">     
+        <div class="col-md-8 col-md-offset-2">
+            <h3>
+                Visualization on score maps and attention maps.
+            </h3>
+		
+            	<img src="./images/visualization.jpg"  class="img-responsive" alt="vis_res" class="center" >
+      	</div>
+    </div>
+     <div class="row">     
+        <div class="col-md-8 col-md-offset-2">
+            <h3>
+                Visualization of attention maps from 7th-12th encoder layers after inserting eMoE module.
+            </h3>
+		
+            	<img src="./images/visualization_attn.png"  class="img-responsive" alt="vis_res" class="center" >
+      	</div>
+    </div>
+
+
+
+	  
+   <!--##### BibTex #####-->
+      <!--  <hr>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    BibTeX
+                </h3>
+                <div class="row align-items-center">
+                    <div class="col py-3">
+                        <pre class="border">             
+@article{ExACT,
+  title={ExACT: Language-guided Conceptual Reasoning and Uncertainty Estimation for Event-based Action Recognition and More},
+  author={Zhou,Jiazhou, Zheng,Xu, Lyu,Yuanhuiyi and Wang,Lin},
+  journal={The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2024}}
+		</pre>
+                    </div>
+                </div>
+          </div>
+        </div>
+	    
+    </div>-->
+</body>
+</html>
